@@ -1,0 +1,23 @@
+@font-face {
+    font-family: AvantGardeDemi;
+    src:
+        url('./../fonts/ITCAvantGardeStd-Demi.eot') format('eot'),
+        url('./../fonts/ITCAvantGardeStd-Demi.woff') format('woff'),
+        url('./../fonts/ITCAvantGardeStd-Demi.svg#ITCAvantGardeStd-Demi') format('svg');
+}
+
+@font-face {
+    font-family: AvantGardeMedium;
+    src:
+        url('./../fonts/ITCAvantGardeStd-Md.eot') format('eot'),
+        url('./../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
+        url('./../fonts/ITCAvantGardeStd-Md.svg#ITCAvantGardeStd-Md') format('svg');
+}
+
+@font-face {
+    font-family: AvantGardeLight;
+    src:
+        url('./../fonts/ITCAvantGardeStd-XLt.eot') format('eot'),
+        url('./../fonts/ITCAvantGardeStd-XLt.woff') format('woff'),
+        url('./../fonts/ITCAvantGardeStd-XLt.svg#ITCAvantGardeStd-XLt') format('svg');
+}
