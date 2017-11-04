@@ -6,12 +6,13 @@ This project is a simple github interface using [ReactJs](https://reactjs.org/) 
 ## Running the project
 
 * Install all project dependencies with `npm install`
-* Start the development server with `npm start`
+* Start the development server with `npm run dev`
 
 ## Testing
 
 * Testing without coverage `npm test`
 * Testing with coverage `npm run test:coverage`
+* Testing with watch `npm run test:watch`
 
 ## Linting and Conventions
 
