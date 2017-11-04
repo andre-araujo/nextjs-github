@@ -18,12 +18,14 @@
         "expect": true,
         "describe": true,
         "it": true,
-        "fetch": true
+        "fetch": true,
+        "jest": true
     },
     "rules": {
         "indent": [1, 4, { "SwitchCase": 1 }],
         "linebreak-style": [0],
         "no-multi-assign": [0],
+        "camelcase": 0,
 
         "react/jsx-filename-extension": [0],
         "react/jsx-indent": [1, 4],
