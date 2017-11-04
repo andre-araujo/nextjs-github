@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "babel"
+    ],
+    "settings": {
+      "ecmascript": 6,
+      "jsx": true
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "globals": {
+        "document": true,
+        "test": true,
+        "expect": true,
+        "describe": true,
+        "it": true,
+        "fetch": true
+    },
+    "rules": {
+        "indent": [1, 4, { "SwitchCase": 1 }],
+        "linebreak-style": [0],
+        "no-multi-assign": [0],
+
+        "react/jsx-filename-extension": [0],
+        "react/jsx-indent": [1, 4],
+        "react/jsx-indent-props": [1, 4]
+    },
+    "extends": "airbnb"
+}

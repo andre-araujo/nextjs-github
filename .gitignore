@@ -1,0 +1,13 @@
+.next
+*.log
+*.swp
+*.lock
+*~
+*.iml
+.*.haste_cache.*
+.DS_Store
+.idea
+node_modules
+dist
+package-lock.json
+coverage

@@ -1,0 +1,62 @@
+{
+    "name": "nextjs-github",
+    "version": "0.0.1",
+    "description": "NextJs app consuming github api",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andre-araujo/nextjs-github"
+    },
+    "author": "andre-araujo <andreluis9214@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "next build",
+        "commit": "git-cz",
+        "dev": "next",
+        "lint:fix": "eslint ./src --fix",
+        "lint": "eslint ./src",
+        "start": "next start",
+        "test": "jest"
+    },
+    "dependencies": {
+        "next": "latest",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
+    "devDependencies": {
+        "commitizen": "^2.9.6",
+        "cz-conventional-changelog": "^2.0.0",
+        "enzyme": "^2.8.2",
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-babel": "^4.1.2",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^5.1.1",
+        "eslint-plugin-react": "^7.1.0",
+        "eslint": "^4.3.0",
+        "jest": "^21.0.0",
+        "react-addons-test-utils": "^15.6.0",
+        "react-test-renderer": "^16.0.0"
+    },
+    "jest": {
+        "verbose": true,
+        "transformIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "setupFiles": [
+            "<rootDir>/shim.js"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 70,
+                "functions": 70,
+                "lines": 70,
+                "statements": 70
+            }
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
