@@ -16,7 +16,9 @@
         "lint:fix": "eslint ./src --fix",
         "lint": "eslint ./src",
         "start": "next start",
-        "test": "jest"
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "next": "latest",
@@ -24,6 +26,7 @@
         "react-dom": "^16.0.0"
     },
     "devDependencies": {
+        "babel-eslint": "^8.0.1",
         "commitizen": "^2.9.6",
         "cz-conventional-changelog": "^2.0.0",
         "enzyme": "^2.8.2",
