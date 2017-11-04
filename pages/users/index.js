@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { getUserInfo } from '../../services/githubAPI';
 
+import MainLayout from '../../layouts/Main';
 import Avatar from '../../components/elements/Avatar';
 import InfoListItem from '../../components/elements/InfoListItem';
 
@@ -20,37 +21,39 @@ export default class MyPage extends Component {
 
         return (
             <div>
-                <Avatar url={userInfo.avatar_url} />
+                <MainLayout title={` - ${userInfo.login}`}>
+                    <Avatar url={userInfo.avatar_url} />
 
-                <ul>
-                    <InfoListItem
-                        title="Username:"
-                        description={userInfo.login}
-                        url={userInfo.htmlUrl}
-                    />
+                    <ul>
+                        <InfoListItem
+                            title="Username:"
+                            description={userInfo.login}
+                            url={userInfo.htmlUrl}
+                        />
 
-                    <InfoListItem
-                        title="Followers:"
-                        description={userInfo.followers}
-                        url={userInfo.followers_url}
-                    />
+                        <InfoListItem
+                            title="Followers:"
+                            description={userInfo.followers}
+                            url={userInfo.followers_url}
+                        />
 
-                    <InfoListItem
-                        title="Following:"
-                        description={userInfo.following}
-                        url={userInfo.following_url}
-                    />
+                        <InfoListItem
+                            title="Following:"
+                            description={userInfo.following}
+                            url={userInfo.following_url}
+                        />
 
-                    <InfoListItem
-                        title="Bio:"
-                        description={userInfo.bio}
-                    />
+                        <InfoListItem
+                            title="Bio:"
+                            description={userInfo.bio}
+                        />
 
-                    <InfoListItem
-                        title="email:"
-                        description={userInfo.email}
-                    />
-                </ul>
+                        <InfoListItem
+                            title="email:"
+                            description={userInfo.email}
+                        />
+                    </ul>
+                </MainLayout>
             </div>
         );
     }
