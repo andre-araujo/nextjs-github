@@ -1,34 +1,45 @@
 import { Component } from 'react';
 
 import Submit from '../../elements/Submit';
+import TextInput from '../../elements/TextInput';
+
+import {
+    Form,
+} from './styles';
 
 class SearchForm extends Component {
-    inputs = {}
+    state = {}
 
-    registerField = (inputElement) => {
-        this.inputs[inputElement.name] = inputElement.value;
+    registerField = (proxyEvent) => {
+        if (proxyEvent && proxyEvent.target) {
+            this.setState({
+                [proxyEvent.target.name]: proxyEvent.target.value,
+            });
+        }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.onSubmit(this.inputs);
+        this.props.onSubmit(this.state);
     }
 
     render() {
         return (
-            <form name="search-form" onSubmit={this.handleSubmit}>
+            <Form
+                name="search-form"
+                onSubmit={this.handleSubmit}
+            >
                 <div>
-                    <input
-                        defaultValue="andre-araujo"
-                        ref={this.registerField}
+                    <TextInput
                         name="user"
                         type="text"
+                        onChange={this.registerField}
                     />
                 </div>
                 <Submit>
                     Buscar
                 </Submit>
-            </form>
+            </Form>
         );
     }
 }
