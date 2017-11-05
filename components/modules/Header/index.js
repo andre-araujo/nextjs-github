@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { withRouter } from 'next/router';
 import { Box } from 'grid-styled';
 
 import {
@@ -8,7 +8,7 @@ import {
     Anchor,
 } from './styles';
 
-export default () => (
+const InnerHeader = ({ router }) => (
     <Wrapper>
         <Header>
             <HeaderContent>
@@ -16,13 +16,13 @@ export default () => (
                     width={[1, '40rem', '50rem', '60rem']}
                     mx="auto"
                 >
-                    <Link href="/">
-                        <Anchor>
-                            ◀ Search
-                        </Anchor>
-                    </Link>
+                    <Anchor onClick={() => router.back()}>
+                        ◀ Back
+                    </Anchor>
                 </Box>
             </HeaderContent>
         </Header>
     </Wrapper>
 );
+
+export default withRouter(InnerHeader);
