@@ -1,4 +1,5 @@
 # NextJs Github
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/117dae47212e4653b44759c9cfbc2304)](https://www.codacy.com/app/andre_luis9214/nextjs-github?utm_source=github.com&utm_medium=referral&utm_content=andre-araujo/nextjs-github&utm_campaign=badger)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This project is a simple github interface using [ReactJs](https://reactjs.org/) on top of Zeit [NextJs](https://github.com/zeit/next.js)
