@@ -1,9 +1,13 @@
 import { Component } from 'react';
+import {
+    Box,
+    Flex,
+} from 'grid-styled';
+
 import { getUserInfo } from '../../services/githubAPI';
 
 import MainLayout from '../../layouts/Main';
-import Avatar from '../../components/elements/Avatar';
-import InfoListItem from '../../components/elements/InfoListItem';
+import UserInfo from '../../components/modules/UserInfo';
 
 export default class MyPage extends Component {
     static async getInitialProps(context) {
@@ -21,39 +25,16 @@ export default class MyPage extends Component {
 
         return (
             <div>
-                <MainLayout title={` - ${userInfo.login}`}>
-                    <Avatar url={userInfo.avatar_url} />
+                <MainLayout title={` - ${userInfo.login}`} />
 
-                    <ul>
-                        <InfoListItem
-                            title="Username:"
-                            description={userInfo.login}
-                            url={userInfo.htmlUrl}
-                        />
-
-                        <InfoListItem
-                            title="Followers:"
-                            description={userInfo.followers}
-                            url={userInfo.followers_url}
-                        />
-
-                        <InfoListItem
-                            title="Following:"
-                            description={userInfo.following}
-                            url={userInfo.following_url}
-                        />
-
-                        <InfoListItem
-                            title="Bio:"
-                            description={userInfo.bio}
-                        />
-
-                        <InfoListItem
-                            title="email:"
-                            description={userInfo.email}
-                        />
-                    </ul>
-                </MainLayout>
+                <Flex
+                    width={[1, '40rem', '50rem', '60rem']}
+                    mx="auto"
+                >
+                    <Box width={[1, 4 / 12]}>
+                        <UserInfo data={userInfo} />
+                    </Box>
+                </Flex>
             </div>
         );
     }

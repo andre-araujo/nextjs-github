@@ -27,7 +27,7 @@ const InfoListItem = ({
             }
 
             {
-                !url && description
+                !url && (description || 'Unavaliable')
             }
         </Description>
     </Wrapper>
@@ -35,7 +35,7 @@ const InfoListItem = ({
 
 InfoListItem.defaultProps = {
     title: null,
-    description: 'Unavaliable',
+    description: null,
     url: null,
 };
 

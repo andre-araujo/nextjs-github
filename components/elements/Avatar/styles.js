@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
 `;
