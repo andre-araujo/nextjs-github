@@ -9,7 +9,7 @@ import {
     getUserRepos,
 } from '../../services/githubAPI';
 
-import MainLayout from '../../layouts/Main';
+import InnerLayout from '../../layouts/Inner';
 import UserInfo from '../../components/modules/UserInfo';
 import UserRepos from '../../components/modules/UserRepos';
 
@@ -42,7 +42,7 @@ export default class MyPage extends Component {
 
         return (
             <div>
-                <MainLayout title={` - ${userInfo.login}`} />
+                <InnerLayout title={` - ${userInfo.login}`} />
 
                 <Flex
                     width={[1, '40rem', '50rem', '60rem']}

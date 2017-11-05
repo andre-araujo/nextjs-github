@@ -18,6 +18,7 @@ export const Label = styled.label`
     top: 50%;
     transform: translateY(-50%);
     transition: 0.2s top, 0.2s transform, 0.2s font-size;
+    pointer-events: none;
 `;
 
 export const Field = styled.input`

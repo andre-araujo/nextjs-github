@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { Box } from 'grid-styled';
 
 export default class MyDocument extends Document {
     static getInitialProps({ renderPage }) {
@@ -20,8 +21,13 @@ export default class MyDocument extends Document {
                     {this.props.styleTags}
                 </Head>
                 <body>
-                    <Main />
-                    <NextScript />
+                    <Box
+                        width="90%"
+                        mx="auto"
+                    >
+                        <Main />
+                        <NextScript />
+                    </Box>
                 </body>
             </html>
         );
