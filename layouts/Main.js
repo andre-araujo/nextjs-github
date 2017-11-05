@@ -19,7 +19,6 @@ export default ({
         >
             <Box
                 flex="1"
-                p={[0, '1em']}
             >
                 { children }
             </Box>
