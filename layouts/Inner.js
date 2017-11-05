@@ -1,7 +1,5 @@
-import Head from 'next/head';
 import {
     Box,
-    Flex,
 } from 'grid-styled';
 
 import MainLayout from './Main';
@@ -14,7 +12,12 @@ export default ({
     <div>
         <MainLayout title={title}>
             <Header />
-            { children }
+            <Box
+                width="90%"
+                mx="auto"
+            >
+                { children }
+            </Box>
         </MainLayout>
     </div>
 );
