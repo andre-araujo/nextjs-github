@@ -14,21 +14,29 @@ app.prepare()
             app.render(req, res, '/');
         });
 
+        server.get('/repos/:username/:reponame', (req, res) => {
+            const queryParams = {
+                username: req.params.username,
+                reponame: req.params.reponame,
+            };
+            app.render(req, res, '/repos', queryParams);
+        });
+
         server.get('/users', (req, res) => {
             app.render(req, res, '/');
         });
 
-        server.get('/users/:id', (req, res) => {
+        server.get('/users/:username', (req, res) => {
             const queryParams = {
-                username: req.params.id,
+                username: req.params.username,
                 sort: 'repos-by-stars',
             };
             app.render(req, res, '/users', queryParams);
         });
 
-        server.get('/users/:id/:sort', (req, res) => {
+        server.get('/users/:username/:sort', (req, res) => {
             const queryParams = {
-                username: req.params.id,
+                username: req.params.username,
                 sort: req.params.sort,
             };
             app.render(req, res, '/users', queryParams);
