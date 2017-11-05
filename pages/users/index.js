@@ -21,7 +21,12 @@ export default class MyPage extends Component {
         const userInfo = await userInfoResp.json();
 
         const userReposResp = await getUserRepos(username);
-        const userRepos = await userReposResp.json();
+        let userRepos = await userReposResp.json();
+
+        userRepos = Array.isArray(userRepos) ?
+            userRepos.sort((cur, next) =>
+                next.stargazers_count - cur.stargazers_count,
+            ) : [];
 
         return {
             userInfo,

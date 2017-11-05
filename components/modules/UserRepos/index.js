@@ -6,41 +6,32 @@ import {
 } from 'prop-types';
 
 import UserRepoItem from '../../elements/UserRepoItem';
+import Sort from '../../elements/Sort';
 
-import {
-    Title,
-    Sort,
-} from './styles';
+import Title from './styles';
 
 const UserRepos = ({
     data,
-}) => {
-    const sortedData = Array.isArray(data) ?
-        data.sort((cur, next) =>
-            next.stargazers_count - cur.stargazers_count,
-        ) : [];
-    return (
-        <section>
-            <Title>User repositories</Title>
-            <Sort>Sort by: Starts | Name</Sort>
-            <ul>
-                {
-                    sortedData.map(userRepo => (
-                        <UserRepoItem
-                            key={userRepo.id}
-                            language={userRepo.language}
-                            description={userRepo.description}
-                            stars={userRepo.stargazers_count}
-                            title={userRepo.name}
-                            githubUrl={userRepo.html_url}
-                        />
-                    ))
-                }
-            </ul>
-        </section>
-    );
-};
-
+}) => (
+    <section>
+        <Title>User repositories</Title>
+        <Sort />
+        <ul>
+            {
+                data.map(userRepo => (
+                    <UserRepoItem
+                        key={userRepo.id}
+                        language={userRepo.language}
+                        description={userRepo.description}
+                        stars={userRepo.stargazers_count}
+                        title={userRepo.name}
+                        githubUrl={userRepo.html_url}
+                    />
+                ))
+            }
+        </ul>
+    </section>
+);
 
 UserRepos.defaultProps = {
     data: [],
