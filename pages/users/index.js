@@ -15,18 +15,26 @@ import UserRepos from '../../components/modules/UserRepos';
 
 export default class MyPage extends Component {
     static async getInitialProps(context) {
-        const { username } = context.query;
+        const {
+            username,
+            sort,
+        } = context.query;
+
+        const sortBy = sort && sort.replace('repos-by-', '');
 
         const userInfoResp = await getUserInfo(username);
         const userInfo = await userInfoResp.json();
 
-        const userReposResp = await getUserRepos(username);
+        if (userInfo.message === 'Not Found') {
+            return {
+                notFound: userInfo.message,
+            };
+        }
+
+        const userReposResp = await getUserRepos(username, sortBy);
         let userRepos = await userReposResp.json();
 
-        userRepos = Array.isArray(userRepos) ?
-            userRepos.sort((cur, next) =>
-                next.stargazers_count - cur.stargazers_count,
-            ) : [];
+        userRepos = userRepos.items || [];
 
         return {
             userInfo,
@@ -38,28 +46,43 @@ export default class MyPage extends Component {
         const {
             userInfo,
             userRepos,
+            notFound,
         } = this.props;
+
+        if (notFound) {
+            return (
+                <div>
+                    <InnerLayout title={` - ${notFound}`}>
+                        {
+                            notFound &&
+                            <h2>{ notFound }</h2>
+                        }
+                    </InnerLayout>
+                </div>
+            );
+        }
 
         return (
             <div>
-                <InnerLayout title={` - ${userInfo.login}`} />
+                <InnerLayout title={` - ${userInfo.login}`}>
 
-                <Flex
-                    width={[1, '40rem', '50rem', '60rem']}
-                    mx="auto"
-                    direction={['column', 'row']}
-                >
-                    <Box
-                        mr={[0, '2rem']}
-                        width={[1, 3 / 12]}
+                    <Flex
+                        width={[1, '40rem', '50rem', '60rem']}
+                        mx="auto"
+                        direction={['column', 'row']}
                     >
-                        <UserInfo data={userInfo} />
-                    </Box>
+                        <Box
+                            mr={[0, '2rem']}
+                            width={[1, 3 / 12]}
+                        >
+                            <UserInfo data={userInfo} />
+                        </Box>
 
-                    <Box width={[1, 9 / 12]}>
-                        {<UserRepos data={userRepos || []} />}
-                    </Box>
-                </Flex>
+                        <Box width={[1, 9 / 12]}>
+                            {<UserRepos data={userRepos || []} />}
+                        </Box>
+                    </Flex>
+                </InnerLayout>
             </div>
         );
     }

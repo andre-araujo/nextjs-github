@@ -10,12 +10,27 @@ app.prepare()
     .then(() => {
         const server = express();
 
+        server.get('/', (req, res) => {
+            app.render(req, res, '/');
+        });
+
         server.get('/users', (req, res) => {
             app.render(req, res, '/');
         });
 
         server.get('/users/:id', (req, res) => {
-            const queryParams = { username: req.params.id };
+            const queryParams = {
+                username: req.params.id,
+                sort: 'repos-by-stars',
+            };
+            app.render(req, res, '/users', queryParams);
+        });
+
+        server.get('/users/:id/:sort', (req, res) => {
+            const queryParams = {
+                username: req.params.id,
+                sort: req.params.sort,
+            };
             app.render(req, res, '/users', queryParams);
         });
 

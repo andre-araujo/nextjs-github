@@ -25,7 +25,10 @@ export default () => (
                     </Box>
                     <SearchForm
                         onSubmit={({ user }) => {
-                            Router.push(`/users?username=${user}`, `/users/${user}`);
+                            Router.push(
+                                `/users?username=${user}&sort=repos-by-stars`,
+                                `/users/${user}/repos-by-stars`,
+                            );
                         }}
                     />
                 </Box>
