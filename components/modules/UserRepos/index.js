@@ -21,11 +21,12 @@ const UserRepos = ({
                 data.map(userRepo => (
                     <UserRepoItem
                         key={userRepo.id}
-                        language={userRepo.language}
                         description={userRepo.description}
+                        fullname={userRepo.full_name}
+                        githubUrl={userRepo.html_url}
+                        language={userRepo.language}
                         stars={userRepo.stargazers_count}
                         title={userRepo.name}
-                        githubUrl={userRepo.html_url}
                     />
                 ))
             }
@@ -39,11 +40,11 @@ UserRepos.defaultProps = {
 
 UserRepos.propTypes = {
     data: arrayOf(shape({
+        html_url: string,
         id: number,
         language: string,
-        stargazers_count: number,
         name: string,
-        html_url: string,
+        stargazers_count: number,
     })).isRequired,
 };
 

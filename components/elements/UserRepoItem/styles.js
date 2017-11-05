@@ -7,6 +7,8 @@ export const Wrapper = styled.li`
 
 export const Anchor = styled.a`
     cursor: pointer;
+    display: inline-block;
+    margin-right: .5rem;
     text-decoration: none;
 `;
 
@@ -15,6 +17,7 @@ export const Title = styled.h3`
     display: inline-block;
     font-family: AvantGardeDemi;
     font-size: 1rem;
+    word-break: break-all;
 
     :hover {
         opacity: .6;
