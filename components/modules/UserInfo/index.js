@@ -1,5 +1,5 @@
 import Avatar from '../../elements/Avatar';
-import InfoListItem from '../../elements/InfoListItem';
+import UserInfoItem from '../../elements/UserInfoItem';
 
 const UserInfo = ({
     data,
@@ -8,31 +8,29 @@ const UserInfo = ({
         <Avatar url={data.avatar_url} />
 
         <ul>
-            <InfoListItem
+            <UserInfoItem
                 title="Username:"
                 description={data.login}
-                url={data.htmlUrl}
+                url={data.html_url}
             />
 
-            <InfoListItem
+            <UserInfoItem
                 title="Followers:"
                 description={data.followers}
-                url={data.followers_url}
             />
 
-            <InfoListItem
+            <UserInfoItem
                 title="Following:"
                 description={data.following}
-                url={data.following_url}
             />
 
-            <InfoListItem
+            <UserInfoItem
                 title="Bio:"
                 description={data.bio}
             />
 
-            <InfoListItem
-                title="email:"
+            <UserInfoItem
+                title="Email:"
                 description={data.email}
             />
         </ul>
