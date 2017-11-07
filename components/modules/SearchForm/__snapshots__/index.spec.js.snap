@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm component should match snapshot 1`] = `
+<form
+  className="sc-EHOje bepPhO"
+  name="search-form"
+  onSubmit={[Function]}
+>
+  <div>
+    <div
+      className="sc-bwzfXH pHugw"
+    >
+      <div
+        className="sc-htpNat iFhpIY"
+      >
+        <input
+          className="sc-ifAKCX hpdfCg"
+          name="user"
+          onChange={[Function]}
+          required={true}
+          type="text"
+        />
+        <label
+          className="sc-bxivhb frnCGp"
+          htmlFor="user"
+        >
+          label
+        </label>
+      </div>
+    </div>
+  </div>
+  <input
+    className="sc-bdVaJa jDEzzO"
+    type="submit"
+    value="Buscar"
+  />
+</form>
+`;

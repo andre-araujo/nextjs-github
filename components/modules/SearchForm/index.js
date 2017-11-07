@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { func } from 'prop-types';
 
 import Submit from '../../elements/Submit';
 import TextInput from '../../elements/TextInput';
@@ -11,7 +12,7 @@ class SearchForm extends Component {
     state = {}
 
     registerField = (proxyEvent) => {
-        if (proxyEvent && proxyEvent.target) {
+        if (proxyEvent && proxyEvent.target && proxyEvent.target.name) {
             this.setState({
                 [proxyEvent.target.name]: proxyEvent.target.value,
             });
@@ -43,5 +44,9 @@ class SearchForm extends Component {
         );
     }
 }
+
+SearchForm.propTypes = {
+    onSubmit: func.isRequired,
+};
 
 export default SearchForm;
