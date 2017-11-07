@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should match snapshot with Unavaliable description 1`] = `
+<div
+  className="sc-bxivhb doffTV"
+>
+  <header
+    className="sc-ifAKCX hsZXKG"
+  >
+    <header
+      className="sc-EHOje bNvVVQ"
+    >
+      <div
+        className="sc-bdVaJa krDLuv"
+        is={null}
+      >
+        <a
+          className="sc-bZQynM CNreJ"
+          onClick={[Function]}
+        >
+          ◀ Back
+        </a>
+      </div>
+    </header>
+  </header>
+</div>
+`;
