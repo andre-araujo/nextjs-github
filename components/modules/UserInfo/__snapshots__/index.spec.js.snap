@@ -20,7 +20,7 @@ exports[`UserInfo component should match snapshot with all user data 1`] = `
         className="sc-EHOje kLGaUO"
       >
         <h3
-          className="sc-bZQynM ufUOS"
+          className="sc-bZQynM eycCXF"
         >
           Username:
         </h3>
@@ -39,7 +39,7 @@ exports[`UserInfo component should match snapshot with all user data 1`] = `
         className="sc-EHOje kLGaUO"
       >
         <h3
-          className="sc-bZQynM ufUOS"
+          className="sc-bZQynM eycCXF"
         >
           Followers:
         </h3>
@@ -53,7 +53,7 @@ exports[`UserInfo component should match snapshot with all user data 1`] = `
         className="sc-EHOje kLGaUO"
       >
         <h3
-          className="sc-bZQynM ufUOS"
+          className="sc-bZQynM eycCXF"
         >
           Following:
         </h3>
@@ -67,7 +67,7 @@ exports[`UserInfo component should match snapshot with all user data 1`] = `
         className="sc-EHOje kLGaUO"
       >
         <h3
-          className="sc-bZQynM ufUOS"
+          className="sc-bZQynM eycCXF"
         >
           Bio:
         </h3>
@@ -81,7 +81,7 @@ exports[`UserInfo component should match snapshot with all user data 1`] = `
         className="sc-EHOje kLGaUO"
       >
         <h3
-          className="sc-bZQynM ufUOS"
+          className="sc-bZQynM eycCXF"
         >
           Email:
         </h3>

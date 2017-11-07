@@ -10,7 +10,6 @@ export const Title = styled.h3`
     margin-bottom: .5em;
 
     @media (max-width: 39.94rem) {
-        margin-bottom: 0;
         margin-right: .5em;
     }
 `;

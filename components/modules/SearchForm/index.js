@@ -34,6 +34,7 @@ class SearchForm extends Component {
                     <TextInput
                         name="user"
                         type="text"
+                        label="Type an username"
                         onChange={this.registerField}
                     />
                 </div>

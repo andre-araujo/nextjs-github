@@ -24,7 +24,7 @@ exports[`SearchForm component should match snapshot 1`] = `
           className="sc-bxivhb frnCGp"
           htmlFor="user"
         >
-          label
+          Type an username
         </label>
       </div>
     </div>
