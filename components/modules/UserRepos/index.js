@@ -40,6 +40,7 @@ UserRepos.defaultProps = {
 
 UserRepos.propTypes = {
     data: arrayOf(shape({
+        full_name: string.isRequired,
         html_url: string,
         id: number,
         language: string,

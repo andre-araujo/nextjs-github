@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserRepos component should match snapshot with all user repo data 1`] = `
+<section>
+  <styled.h2>
+    User repositories
+  </styled.h2>
+  <withRoute(Sort) />
+  <ul>
+    <UserRepoItem
+      description={null}
+      fullname="user/repo"
+      githubUrl="html_url"
+      key="32"
+      language="language"
+      stars={43}
+      title="name"
+    />
+  </ul>
+</section>
+`;
