@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoItem component should match snapshot with Unavaliable description 1`] = `
+<styled.li>
+  <styled.h3>
+    title
+  </styled.h3>
+  <styled.p>
+    Unavaliable
+  </styled.p>
+</styled.li>
+`;
+
+exports[`UserInfoItem component should match snapshot with description 1`] = `
+<styled.li>
+  <styled.h3>
+    title
+  </styled.h3>
+  <styled.p>
+    description
+  </styled.p>
+</styled.li>
+`;
+
+exports[`UserInfoItem component should match snapshot with link on description 1`] = `
+<styled.li>
+  <styled.h3>
+    title
+  </styled.h3>
+  <styled.p>
+    <a
+      href="some_link"
+      target="_blank"
+    >
+      description
+    </a>
+  </styled.p>
+</styled.li>
+`;
