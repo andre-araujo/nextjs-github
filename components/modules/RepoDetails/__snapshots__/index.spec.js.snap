@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepoDetails component should match snapshot with all repo data 1`] = `
+<section>
+  <h2
+    className="sc-bxivhb jTgEYt"
+  >
+    name
+  </h2>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      full name
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      full_name
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      forks
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      2
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      language
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      language
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      name
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      name
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      open issues
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      15
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      stargazers count
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      515
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      subscribers count
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      151
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      homepage
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      homepage
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      html url
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      <a
+        href="http"
+        target="_blank"
+      >
+        http
+      </a>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`RepoDetails component should match snapshot with only full_name content 1`] = `
+<section>
+  <h2
+    className="sc-bxivhb jTgEYt"
+  />
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <h3
+      className="sc-ifAKCX kgARlw"
+    >
+      full name
+    </h3>
+    <p
+      className="sc-EHOje cheXru"
+    >
+      full_name
+    </p>
+  </div>
+</section>
+`;
