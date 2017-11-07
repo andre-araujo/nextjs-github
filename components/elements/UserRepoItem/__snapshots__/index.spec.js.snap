@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserRepoItem component should match snapshot with Unavaliable description 1`] = `
+<styled.li>
+  <Box
+    mb="1rem"
+  >
+    <Link
+      as="/repos/some/name"
+      href="/repos?username=some&reponame=name"
+    >
+      <styled.a>
+        <styled.h3>
+          title
+        </styled.h3>
+      </styled.a>
+    </Link>
+    <styled.a
+      href="githubUrl"
+      target="_blank"
+    >
+      <img
+        alt="github logo"
+        src="/static/images/github-logo.svg"
+        width="15"
+      />
+    </styled.a>
+  </Box>
+  <Styled(styled.p)>
+    description
+  </Styled(styled.p)>
+  <Flex>
+    <styled.p>
+      ★ 
+      321
+    </styled.p>
+    <styled.p />
+  </Flex>
+</styled.li>
+`;

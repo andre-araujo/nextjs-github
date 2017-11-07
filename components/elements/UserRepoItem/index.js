@@ -71,6 +71,7 @@ UserRepoItem.propTypes = {
     githubUrl: string,
     stars: number,
     title: string.isRequired,
+    fullname: string.isRequired,
 };
 
 export default UserRepoItem;
