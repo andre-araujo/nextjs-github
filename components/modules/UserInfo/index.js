@@ -1,5 +1,11 @@
 import { Box } from 'grid-styled';
 
+import {
+    number,
+    shape,
+    string,
+} from 'prop-types';
+
 import Avatar from '../../elements/Avatar';
 import UserInfoItem from '../../elements/UserInfoItem';
 
@@ -39,5 +45,21 @@ const UserInfo = ({
         </Box>
     </section>
 );
+
+UserInfo.defaultProps = {
+    data: {},
+};
+
+UserInfo.propTypes = {
+    data: shape({
+        avatar_url: string,
+        login: string,
+        html_url: string,
+        followers: number,
+        following: number,
+        bio: string,
+        email: string,
+    }).isRequired,
+};
 
 export default UserInfo;

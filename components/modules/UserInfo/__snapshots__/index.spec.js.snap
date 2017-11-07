@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfo component should match snapshot with all user data 1`] = `
+<section>
+  <div
+    className="sc-bxivhb dhUpOj"
+  >
+    <img
+      alt="user avatar"
+      className="sc-ifAKCX eyjnnY"
+      src="avatar_url"
+    />
+  </div>
+  <div
+    className="sc-bdVaJa csdvoq"
+    is={null}
+  >
+    <ul>
+      <li
+        className="sc-EHOje kLGaUO"
+      >
+        <h3
+          className="sc-bZQynM ufUOS"
+        >
+          Username:
+        </h3>
+        <p
+          className="sc-gzVnrw hoHArn"
+        >
+          <a
+            href="html_url"
+            target="_blank"
+          >
+            login
+          </a>
+        </p>
+      </li>
+      <li
+        className="sc-EHOje kLGaUO"
+      >
+        <h3
+          className="sc-bZQynM ufUOS"
+        >
+          Followers:
+        </h3>
+        <p
+          className="sc-gzVnrw hoHArn"
+        >
+          34
+        </p>
+      </li>
+      <li
+        className="sc-EHOje kLGaUO"
+      >
+        <h3
+          className="sc-bZQynM ufUOS"
+        >
+          Following:
+        </h3>
+        <p
+          className="sc-gzVnrw hoHArn"
+        >
+          23
+        </p>
+      </li>
+      <li
+        className="sc-EHOje kLGaUO"
+      >
+        <h3
+          className="sc-bZQynM ufUOS"
+        >
+          Bio:
+        </h3>
+        <p
+          className="sc-gzVnrw hoHArn"
+        >
+          bio
+        </p>
+      </li>
+      <li
+        className="sc-EHOje kLGaUO"
+      >
+        <h3
+          className="sc-bZQynM ufUOS"
+        >
+          Email:
+        </h3>
+        <p
+          className="sc-gzVnrw hoHArn"
+        >
+          email
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
