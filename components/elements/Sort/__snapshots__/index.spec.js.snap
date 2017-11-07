@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sort component should match snapshot 1`] = `
+<div
+  class="sc-bdVaJa eGXFjB"
+>
+  <span
+    class="sc-bwzfXH dmLdKt"
+  >
+    Sort by:
+  </span>
+  <ul>
+    <li
+      class="sc-bxivhb dqXZng"
+    >
+      <span
+        class="sc-htpNat ijxGs"
+      >
+        stars
+      </span>
+    </li>
+    <li
+      class="sc-bxivhb dqXZng"
+    >
+      <span
+        class="sc-htpNat ijxGs"
+      >
+        forks
+      </span>
+    </li>
+    <li
+      class="sc-bxivhb dqXZng"
+    >
+      <span
+        class="sc-htpNat ijxGs"
+      >
+        updated
+      </span>
+    </li>
+  </ul>
+</div>
+`;
