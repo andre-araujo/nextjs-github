@@ -9,7 +9,6 @@ import {
 } from './styles';
 
 function TextInput({
-    value,
     label,
     ...inputProps
 }) {
@@ -18,7 +17,6 @@ function TextInput({
             <Content>
                 <Field
                     {...inputProps}
-                    id={inputProps.name}
                     type="text"
                     required
                     name={inputProps.name}

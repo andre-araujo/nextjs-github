@@ -1,34 +1,37 @@
 import React from 'react';
 import {
     shallow,
-    mount,
 } from 'enzyme';
 
 import TextInput from './index';
+import { Field } from './styles';
 
 describe('TextInput component', () => {
-    const props = {
-        name: 'nameMock',
-        label: 'labelMock',
-        onChange: jest.fn(),
-    };
+    let props;
 
-    it('should render without crashing', () => {
-        shallow(<TextInput {...props} />);
+    beforeEach(() => {
+        props = {
+            name: 'nameMock',
+            label: 'labelMock',
+            onChange: jest.fn(),
+        };
     });
 
-    describe('should trigger onChange events', () => {
-        const textInput = mount(<TextInput {...props} />);
-        const input = textInput.find('input');
+    it('should match snapshot', () => {
+        expect(shallow(
+            <TextInput {...props} />,
+        )).toMatchSnapshot();
+    });
 
-        it('should trigger onChange prop callback when value is changed', () => {
-            input.simulate('change', {
-                target: {
-                    value: 'value',
-                },
-            });
+    it('should call onChange function', () => {
+        const Input = shallow(
+            <TextInput {...props} />,
+        );
 
-            expect(props.onChange.mock.calls.length).toBeGreaterThanOrEqual(1);
-        });
+        Input
+            .find(Field)
+            .simulate('change', { target: { value: 'test' } });
+
+        expect(props.onChange).toHaveBeenCalled();
     });
 });
