@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UserRepoItem component should match snapshot with Unavaliable description 1`] = `
+exports[`UserRepoItem component should match snapshot 1`] = `
 <styled.li>
   <Box
     mb="1rem"

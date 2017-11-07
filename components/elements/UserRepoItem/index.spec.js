@@ -16,7 +16,7 @@ describe('UserRepoItem component', () => {
         };
     });
 
-    it('should match snapshot with Unavaliable description', () => {
+    it('should match snapshot', () => {
         expect(shallow(
             <UserRepoItem
                 {...props}
