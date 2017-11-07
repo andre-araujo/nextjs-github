@@ -46,6 +46,6 @@ app.prepare()
 
         server.listen(port, (err) => {
             if (err) throw err;
-            console.log(`> Ready on http://localhost:${port}`);
+            process.stdout.write(`> Ready on http://localhost:${port}\n`);
         });
     });

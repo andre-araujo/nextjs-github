@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <html>
+            <html lang="pt-BR">
                 <Head>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />

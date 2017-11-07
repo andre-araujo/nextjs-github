@@ -1,3 +1,7 @@
 dist
 node_modules
+.next
+static
+coverage
+shim.js
 *.json
