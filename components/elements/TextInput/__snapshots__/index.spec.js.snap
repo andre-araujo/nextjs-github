@@ -1,19 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput component should match snapshot 1`] = `
-<styled.div>
-  <styled.div>
-    <styled.input
+<div
+  className="sc-bdVaJa ibpmVy"
+>
+  <div
+    className="sc-bwzfXH hTErTh"
+  >
+    <input
+      className="sc-bxivhb kIdduM"
       name="nameMock"
       onChange={[Function]}
       required={true}
       type="text"
     />
-    <styled.label
+    <label
+      className="sc-htpNat iUdHjJ"
       htmlFor="nameMock"
     >
       labelMock
-    </styled.label>
-  </styled.div>
-</styled.div>
+    </label>
+  </div>
+</div>
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    shallow,
+    mount,
 } from 'enzyme';
 
 import TextInput from './index';
@@ -18,13 +18,13 @@ describe('TextInput component', () => {
     });
 
     it('should match snapshot', () => {
-        expect(shallow(
+        expect(mount(
             <TextInput {...props} />,
         )).toMatchSnapshot();
     });
 
     it('should call onChange function', () => {
-        const Input = shallow(
+        const Input = mount(
             <TextInput {...props} />,
         );
 
