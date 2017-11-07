@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Submit component should match snapshot with value as testing 1`] = `
+<styled.input
+  type="submit"
+  value="testing"
+/>
+`;
+
+exports[`Submit component should match snapshot with value as tests 1`] = `
+<styled.input
+  type="submit"
+  value="tests"
+/>
+`;
