@@ -1,9 +1,11 @@
+import { string } from 'prop-types';
+
 import {
     Wrapper,
     Image,
 } from './styles';
 
-export default ({
+const Avatar = ({
     url,
 }) => (
     <Wrapper>
@@ -13,3 +15,9 @@ export default ({
         />
     </Wrapper>
 );
+
+Avatar.propTypes = {
+    url: string.isRequired,
+};
+
+export default Avatar;

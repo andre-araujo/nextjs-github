@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component should match snapshot with url as something 1`] = `
+<styled.div>
+  <styled.img
+    alt="user avatar"
+    src="something"
+  />
+</styled.div>
+`;
+
+exports[`Avatar component should match snapshot with url as testing 1`] = `
+<styled.div>
+  <styled.img
+    alt="user avatar"
+    src="testing"
+  />
+</styled.div>
+`;
