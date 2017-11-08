@@ -8,7 +8,10 @@ import {
     Anchor,
 } from './styles';
 
-const InnerHeader = ({ router }) => (
+const InnerHeader = ({
+    router,
+    backUrl,
+}) => (
     <Wrapper>
         <Header>
             <HeaderContent>
@@ -16,7 +19,15 @@ const InnerHeader = ({ router }) => (
                     width={[1, '40rem', '50rem', '60rem']}
                     mx="auto"
                 >
-                    <Anchor onClick={() => router.back()}>
+                    <Anchor
+                        onClick={() => {
+                            if (backUrl) {
+                                router.push(backUrl);
+                            } else {
+                                router.back();
+                            }
+                        }}
+                    >
                         ◀ Back
                     </Anchor>
                 </Box>

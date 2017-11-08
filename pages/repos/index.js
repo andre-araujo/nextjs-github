@@ -37,23 +37,18 @@ export default class MyPage extends Component {
             notFound,
         } = this.props;
 
-        if (notFound) {
-            return (
-                <div>
-                    <InnerLayout title={` - ${notFound}`}>
-                        {
-                            notFound &&
-                            <h2>{ notFound }</h2>
-                        }
-                    </InnerLayout>
-                </div>
-            );
-        }
-
         return (
             <div>
-                <InnerLayout title={` - ${repoInfo.name}`}>
-                    <RepoDetails data={repoInfo} />
+                <InnerLayout title={` - ${repoInfo && repoInfo.name}`}>
+                    {
+                        notFound &&
+                        <h2>Repository not found</h2>
+                    }
+
+                    {
+                        repoInfo && repoInfo.name &&
+                        <RepoDetails data={repoInfo} />
+                    }
                 </InnerLayout>
             </div>
         );

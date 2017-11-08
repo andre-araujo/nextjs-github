@@ -7,11 +7,12 @@ import Header from '../components/modules/Header';
 
 export default ({
     children,
+    backUrl,
     title = '',
 }) => (
     <div>
         <MainLayout title={title}>
-            <Header />
+            <Header backUrl={backUrl} />
             <Box
                 width="90%"
                 mx="auto"

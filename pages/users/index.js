@@ -54,39 +54,36 @@ export default class MyPage extends Component {
             notFound,
         } = this.props;
 
-        if (notFound) {
-            return (
-                <div>
-                    <InnerLayout title={` - ${notFound}`}>
-                        {
-                            notFound &&
-                            <h2>{ notFound }</h2>
-                        }
-                    </InnerLayout>
-                </div>
-            );
-        }
-
         return (
             <div>
-                <InnerLayout title={` - ${userInfo.login}`}>
+                <InnerLayout
+                    backUrl={'/'}
+                    title={` - ${userInfo && userInfo.login}`}
+                >
+                    {
+                        notFound &&
+                        <h2>User not found</h2>
+                    }
 
-                    <Flex
-                        width={[1, '40rem', '50rem', '60rem']}
-                        mx="auto"
-                        direction={['column', 'row']}
-                    >
-                        <Box
-                            mr={[0, '2rem']}
-                            width={[1, 3 / 12]}
+                    {
+                        userInfo && userInfo.login &&
+                        <Flex
+                            width={[1, '40rem', '50rem', '60rem']}
+                            mx="auto"
+                            direction={['column', 'row']}
                         >
-                            <UserInfo data={userInfo} />
-                        </Box>
+                            <Box
+                                mr={[0, '2rem']}
+                                width={[1, 3 / 12]}
+                            >
+                                <UserInfo data={userInfo} />
+                            </Box>
 
-                        <Box width={[1, 9 / 12]}>
-                            {<UserRepos data={userRepos || []} />}
-                        </Box>
-                    </Flex>
+                            <Box width={[1, 9 / 12]}>
+                                {<UserRepos data={userRepos || []} />}
+                            </Box>
+                        </Flex>
+                    }
                 </InnerLayout>
             </div>
         );
