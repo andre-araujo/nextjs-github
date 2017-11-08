@@ -4,6 +4,8 @@ import {
     Flex,
 } from 'grid-styled';
 
+import Loading from '../components/elements/Loading';
+
 export default ({
     children,
     title = '',
@@ -23,5 +25,6 @@ export default ({
                 { children }
             </Box>
         </Flex>
+        <Loading />
     </div>
 );
