@@ -9,6 +9,18 @@ This project is a simple github interface using [ReactJs](https://reactjs.org/) 
 * Install all project dependencies with `npm install`
 * Start the development server with `npm run dev`
 
+## Github API Authentication (opitional)
+
+This project will consume github API even if you skip this step.
+If you skip this step, github API will limit requests.
+
+* Create a `.env` file on application root
+* Add github `CLIENT_ID` and `CLIENT_SECRET`
+```
+    CLIENT_ID=xxxxxxxxxxxxxxxxx
+    CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
 ## Testing
 
 * Testing without coverage `npm test`
