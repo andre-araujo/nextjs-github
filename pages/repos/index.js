@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import {
     getRepoInfo,
+    getOrigin,
 } from '../../services/githubAPI';
 
 import InnerLayout from '../../layouts/Inner';
@@ -14,7 +15,11 @@ export default class MyPage extends Component {
             reponame,
         } = context.query;
 
-        const repoInfoResp = await getRepoInfo(`${username}/${reponame}`);
+        const {
+            req,
+        } = context;
+
+        const repoInfoResp = await getRepoInfo(getOrigin(req), `${username}/${reponame}`);
         const repoInfo = await repoInfoResp.json();
 
         if (repoInfo.message === 'Not Found') {

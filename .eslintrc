@@ -20,7 +20,8 @@
         "it": true,
         "fetch": true,
         "jest": true,
-        "beforeEach": true
+        "beforeEach": true,
+        "window": true
     },
     "rules": {
         "indent": [1, 4, { "SwitchCase": 1 }],

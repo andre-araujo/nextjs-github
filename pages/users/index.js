@@ -7,6 +7,7 @@ import {
 import {
     getUserInfo,
     getUserRepos,
+    getOrigin,
 } from '../../services/githubAPI';
 
 import InnerLayout from '../../layouts/Inner';
@@ -20,9 +21,13 @@ export default class MyPage extends Component {
             sort,
         } = context.query;
 
+        const {
+            req,
+        } = context;
+
         const sortBy = sort && sort.replace('repos-by-', '');
 
-        const userInfoResp = await getUserInfo(username);
+        const userInfoResp = await getUserInfo(getOrigin(req), username);
         const userInfo = await userInfoResp.json();
 
         if (userInfo.message === 'Not Found') {
@@ -31,7 +36,7 @@ export default class MyPage extends Component {
             };
         }
 
-        const userReposResp = await getUserRepos(username, sortBy);
+        const userReposResp = await getUserRepos(getOrigin(req), username, sortBy);
         let userRepos = await userReposResp.json();
 
         userRepos = userRepos.items || [];
